@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dương Nguyễn Công Dinh | Portfolio Truyền Thông Đa Phương Tiện</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-heading: #0f172a;
+        }
 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); }
+
+        header { background: var(--primary); color: white; padding: 60px 20px; text-align: center; background-image: var(--accent-gradient); }
+        header h1 { font-size: 2.5rem; letter-spacing: -0.5px; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
+
+        .container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
+        
+        .card { background: var(--card-bg); border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; }
+        .card h2 { color: var(--text-heading); border-bottom: 3px solid var(--accent); padding-bottom: 8px; margin-bottom: 20px; font-size: 1.35rem; display: inline-block; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .info-item { background: #f1f5f9; padding: 12px 18px; border-radius: 8px; }
+        .info-item strong { color: var(--text-heading); }
+
+        .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; margin-right: 5px; margin-top: 5px; }
+
+        ul.timeline { list-style: none; position: relative; padding-left: 20px; }
+        ul.timeline li { margin-bottom: 15px; position: relative; }
+        ul.timeline li::before { content: "•"; color: var(--accent); font-size: 1.8rem; position: absolute; left: -20px; top: -5px; }
+
+        .skill-box { background: #fafafa; border-left: 4px solid var(--accent); padding: 15px 20px; margin-top: 15px; border-radius: 0 8px 8px 0; }
+        .skill-box h3 { font-size: 1.1rem; color: var(--text-heading); margin-bottom: 8px; }
+
+        footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DƯƠNG NGUYỄN CÔNG DINH</h1>
+        <p>Sinh viên Truyền thông Đa phương tiện — Đại học Cần Thơ</p>
+    </header>
+
+    <div class="container">
+        <!-- Thông tin cá nhân -->
+        <div class="card">
+            <h2>📌 Thông Tin Cá Nhân</h2>
+            <div class="grid-2">
+                <div class="info-item"><strong>Họ và tên:</strong> Dương Nguyễn Công Dinh</div>
+                <div class="info-item"><strong>Ngày sinh:</strong> 31/01/2008</div>
+                <div class="info-item"><strong>Trường:</strong> Đại học Cần Thơ</div>
+                <div class="info-item"><strong>Chuyên ngành:</strong> Truyền thông Đa phương tiện</div>
+                <div class="info-item" style="grid-column: span 2;"><strong>Địa chỉ:</strong> Số 5522, Khóm Mỹ Thới 2, P. Cái Vồn, TX. Bình Minh, Tỉnh Vĩnh Long</div>
+            </div>
+        </div>
+
+        <!-- Quá trình học tập & Thành tích -->
+        <div class="card">
+            <h2>🎓 Quá Trình Học Tập & Thành Tích</h2>
+            <ul class="timeline">
+                <li>
+                    <strong>2023 - Nay:</strong> Sinh viên năm nhất ngành Truyền thông Đa phương tiện - Đại học Cần Thơ.
+                </li>
+                <li>
+                    <strong>2020 - 2023:</strong> Học sinh Trường THPT Đông Thành.
+                    <div style="margin-top: 8px;">
+                        <span class="badge">Học sinh Xuất sắc Lớp 10, 11, 12</span>
+                        <span class="badge">Giải HSG Hóa học Cấp Tỉnh</span>
+                        <span class="badge">Đại diện tham gia các cuộc thi giao lưu cấp trường</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Định hướng chuyên môn -->
+        <div class="card">
+            <h2>🎯 Định Hướng Chuyên Môn & Đam Mê</h2>
+
+            <div class="skill-box">
+                <h3>🎬 1. Sản xuất Nội dung & Video (Content & Video Production)</h3>
+                <p>Thích kể chuyện, quay chụp và biên tập video với góc máy, âm thanh sống động.</p>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>Video Editor:</strong> Cắt ghép, chỉnh sửa video YouTube, TikTok, MV, phim ngắn.</li>
+                    <li><strong>Motion Graphics / VFX:</strong> Tạo hiệu ứng hình ảnh, đồ họa chuyển động 2D/3D cho TVC quảng cáo.</li>
+                    <li><strong>Videographer / Photographer:</strong> Quay clip chuyên nghiệp, chụp ảnh sản phẩm & sự kiện.</li>
+                    <li><strong>Creative / Art Director:</strong> Định hình ý tưởng và hình ảnh cho các chiến dịch truyền thông.</li>
+                </ul>
+            </div>
+
+            <div class="skill-box" style="border-left-color: #7c3aed; margin-top: 20px;">
+                <h3>🎮 2. Công nghệ Truyền thông & Game (Media Technology & Game)</h3>
+                <p>Đam mê công nghệ tương tác, môi trường thực tế ảo và thiết kế trải nghiệm Game.</p>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>Game Designer / Level Designer:</strong> Lên ý tưởng, kịch bản và thiết kế màn chơi trong Game.</li>
+                    <li><strong>Interactive Media Developer:</strong> Phát triển sản phẩm truyền thông tương tác ứng dụng VR / AR.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sở thích -->
+        <div class="card">
+            <h2>🎨 Sở Thích Cá Nhân</h2>
+            <p>• <strong>Chơi Game:</strong> Khám phá cơ chế thiết kế Game (Game Design), đồ họa và kịch bản game.</p>
+            <p>• <strong>Sáng tạo nội dung:</strong> Học hỏi các kỹ thuật quay dựng và hiệu ứng hình ảnh mới.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Dương Nguyễn Công Dinh — Đại học Cần Thơ</p>
+    </footer>
+
+</body>
+</html>
