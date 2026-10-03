@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dương Nguyễn Công Dinh | Portfolio Truyền Thông Đa Phương Tiện</title>
+    <title>Dương Nguyễn Công Dinh | Portfolio Truyền Thông Đa Phương Tiện - Khóa 52</title>
     
-    <!-- Nhập Google Fonts: Montserrat (cho Header đồ sộ) & Space Grotesk (cho Tiêu đề mục xịn xò) -->
+    <!-- Nhập Google Fonts: Montserrat & Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #334155;
-            --text-heading: #0f172a;
+            /* Hệ màu Xanh Dương - Xanh Lam đồng bộ */
+            --bg-dark: #080d1a;
+            --card-bg: #0f172a;
+            --primary-blue: #0284c7;
+            --cyan-glow: #38bdf8;
+            --accent-cyan: #06b6d4;
+            --text-light: #f1f5f9;
+            --text-muted: #94a3b8;
+            --card-border: rgba(56, 189, 248, 0.2);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); }
+        body { 
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-light); 
+            background-color: var(--bg-dark); 
+        }
 
         /* ================= HEADER BẦU TRỜI SAO ĐỒ SỘ ================= */
         header {
@@ -74,10 +81,9 @@
             transform: scale(1.05);
         }
 
-        /* Tiêu đề chính: Font Montserrat Đồ Sộ & Siêu Đậm */
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3.5rem); /* Tự động phóng to theo màn hình */
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -87,7 +93,6 @@
             position: relative;
             z-index: 1;
             
-            /* Đổ bóng 3D đa tầng siêu xịn */
             text-shadow: 
                 1px 1px 0px #0284c7,
                 2px 2px 0px #0369a1,
@@ -110,7 +115,6 @@
                 0px 0px 35px rgba(186, 230, 253, 0.9);
         }
 
-        /* Dòng mô tả Header */
         header p {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.25rem;
@@ -137,73 +141,122 @@
             box-shadow: 0 6px 25px rgba(56, 189, 248, 0.35);
         }
 
-        /* ================= TIÊU ĐỀ MỤC XỊN XÒ (H2) ================= */
+        /* ================= CÁC PHẦN DƯỚI ================= */
         .container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
         
-        .card { background: var(--card-bg); border-radius: 16px; padding: 32px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .card { 
+            background: var(--card-bg); 
+            border-radius: 16px; 
+            padding: 32px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); 
+            border: 1px solid var(--card-border); 
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-        /* Tiêu đề H2 thiết kế mới */
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 35px rgba(3, 105, 161, 0.15);
+        }
+
         .card h2 { 
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--text-heading); 
+            color: #ffffff; 
             letter-spacing: -0.3px;
             margin-bottom: 22px; 
             display: flex;
             align-items: center;
             gap: 12px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
-        /* Gạch chân gradient nghệ thuật bên dưới H2 */
         .card h2::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #2563eb, #38bdf8);
+            height: 3px;
+            background: linear-gradient(90deg, #0284c7, #38bdf8);
             border-radius: 4px;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
         }
 
-        /* Icon trong H2 được đặt vào khung bo góc nổi bật */
         .card h2 span.icon-box {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0284c7, #0891b2);
             border-radius: 10px;
             font-size: 1.2rem;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
         }
 
-        /* ================= CÁC THÀNH PHẦN KHÁC ================= */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .info-item { background: #f1f5f9; padding: 14px 18px; border-radius: 10px; font-size: 0.95rem; }
-        .info-item strong { color: var(--text-heading); }
+        .info-item { 
+            background: rgba(2, 132, 199, 0.08); 
+            padding: 14px 18px; 
+            border-radius: 10px; 
+            font-size: 0.95rem; 
+            border: 1px solid rgba(56, 189, 248, 0.12);
+            color: #e2e8f0;
+        }
+        .info-item strong { color: var(--cyan-glow); }
 
-        .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-weight: 600; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; margin-right: 6px; margin-top: 6px; }
+        .badge { 
+            display: inline-block; 
+            background: rgba(56, 189, 248, 0.12); 
+            color: #38bdf8; 
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-weight: 600; 
+            padding: 5px 14px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            margin-right: 6px; 
+            margin-top: 6px; 
+        }
 
         ul.timeline { list-style: none; position: relative; padding-left: 20px; }
-        ul.timeline li { margin-bottom: 16px; position: relative; }
-        ul.timeline li::before { content: "•"; color: var(--accent); font-size: 1.8rem; position: absolute; left: -20px; top: -6px; }
+        ul.timeline li { margin-bottom: 16px; position: relative; color: #cbd5e1; }
+        ul.timeline li strong { color: #ffffff; }
+        ul.timeline li::before { content: "•"; color: var(--cyan-glow); font-size: 1.8rem; position: absolute; left: -20px; top: -6px; }
 
-        .skill-box { background: #fafafa; border-left: 4px solid var(--accent); padding: 18px 22px; margin-top: 15px; border-radius: 0 10px 10px 0; }
-        .skill-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; color: var(--text-heading); margin-bottom: 8px; }
+        .skill-box { 
+            background: rgba(15, 23, 42, 0.6); 
+            border-left: 4px solid var(--primary-blue); 
+            padding: 18px 22px; 
+            margin-top: 15px; 
+            border-radius: 0 10px 10px 0; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .skill-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; color: #38bdf8; margin-bottom: 8px; }
+        .skill-box p { color: #94a3b8; }
+        .skill-box ul li { color: #cbd5e1; margin-bottom: 4px; }
+        .skill-box ul li strong { color: #ffffff; }
 
-        footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; margin-top: 40px; font-family: 'Space Grotesk', sans-serif; }
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            color: #64748b; 
+            font-size: 0.9rem; 
+            border-top: 1px solid rgba(56, 189, 248, 0.15); 
+            margin-top: 40px; 
+            font-family: 'Space Grotesk', sans-serif; 
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>DƯƠNG NGUYỄN CÔNG DINH</h1>
-        <p>Sinh viên Truyền thông Đa phương tiện — Đại học Cần Thơ</p>
+        <p>Sinh viên Truyền thông Đa phương tiện K52 — Đại học Cần Thơ</p>
     </header>
 
     <div class="container">
@@ -214,7 +267,7 @@
                 <div class="info-item"><strong>Họ và tên:</strong> Dương Nguyễn Công Dinh</div>
                 <div class="info-item"><strong>Ngày sinh:</strong> 31/01/2008</div>
                 <div class="info-item"><strong>Trường:</strong> Đại học Cần Thơ</div>
-                <div class="info-item"><strong>Chuyên ngành:</strong> Truyền thông Đa phương tiện</div>
+                <div class="info-item"><strong>Khóa / Ngành:</strong> Khóa 52 — Truyền thông Đa phương tiện</div>
                 <div class="info-item" style="grid-column: span 2;"><strong>Địa chỉ:</strong> Số 5522, Khóm Mỹ Thới 2, P. Cái Vồn, TX. Bình Minh, Tỉnh Vĩnh Long</div>
             </div>
         </div>
@@ -224,10 +277,10 @@
             <h2><span class="icon-box">🎓</span> Quá Trình Học Tập & Thành Tích</h2>
             <ul class="timeline">
                 <li>
-                    <strong>2023 - Nay:</strong> Sinh viên năm nhất ngành Truyền thông Đa phương tiện - Đại học Cần Thơ.
+                    <strong>2026 - Nay:</strong> Sinh viên Khóa 52 ngành Truyền thông Đa phương tiện - Đại học Cần Thơ.
                 </li>
                 <li>
-                    <strong>2020 - 2023:</strong> Học sinh Trường THPT Đông Thành.
+                    <strong>2023 - 2026:</strong> Học sinh Trường THPT Đông Thành.
                     <div style="margin-top: 8px;">
                         <span class="badge">Học sinh Xuất sắc Lớp 10, 11, 12</span>
                         <span class="badge">Giải HSG Hóa học Cấp Tỉnh</span>
@@ -252,7 +305,7 @@
                 </ul>
             </div>
 
-            <div class="skill-box" style="border-left-color: #7c3aed; margin-top: 20px;">
+            <div class="skill-box" style="border-left-color: var(--accent-cyan); margin-top: 20px;">
                 <h3>🎮 2. Công nghệ Truyền thông & Game (Media Technology & Game)</h3>
                 <p>Đam mê công nghệ tương tác, môi trường thực tế ảo và thiết kế trải nghiệm Game.</p>
                 <ul style="margin-left: 20px; margin-top: 8px;">
@@ -265,8 +318,8 @@
         <!-- Sở thích -->
         <div class="card">
             <h2><span class="icon-box">🎨</span> Sở Thích Cá Nhân</h2>
-            <p>• <strong>Chơi Game:</strong> Khám phá cơ chế thiết kế Game (Game Design), đồ họa và kịch bản game.</p>
-            <p>• <strong>Sáng tạo nội dung:</strong> Học hỏi các kỹ thuật quay dựng và hiệu ứng hình ảnh mới.</p>
+            <p style="color: #cbd5e1; margin-bottom: 6px;">• <strong style="color: #fff;">Chơi Game:</strong> Khám phá cơ chế thiết kế Game (Game Design), đồ họa và kịch bản game.</p>
+            <p style="color: #cbd5e1;">• <strong style="color: #fff;">Sáng tạo nội dung:</strong> Học hỏi các kỹ thuật quay dựng và hiệu ứng hình ảnh mới.</p>
         </div>
     </div>
 
