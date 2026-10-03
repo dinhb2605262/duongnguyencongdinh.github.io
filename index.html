@@ -120,3 +120,93 @@
 
 </body>
 </html>
+header {
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 40%, #3a506b 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #64dfdf;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+/* Hiệu ứng va đập ánh sáng nền (Glow Effect) */
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(100, 223, 223, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Hiệu ứng Hover vào Header */
+header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+}
+
+header:hover::before {
+    opacity: 0.8;
+}
+
+/* 1. Tiêu đề chính: Chữ 3D, Sans-serif hiện đại, in hoa, đậm */
+header h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    
+    /* Hiệu ứng Text-Shadow 3D đa lớp */
+    text-shadow: 
+        1px 1px 0px #2563eb,
+        2px 2px 0px #1d4ed8,
+        3px 3px 0px #1e40af,
+        4px 4px 0px #1e3a8a,
+        5px 5px 10px rgba(0, 0, 0, 0.5),
+        0px 0px 20px rgba(100, 223, 223, 0.4);
+        
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header:hover h1 {
+    transform: scale(1.02);
+    text-shadow: 
+        1px 1px 0px #3b82f6,
+        2px 2px 0px #2563eb,
+        3px 3px 0px #1d4ed8,
+        4px 4px 0px #1e40af,
+        5px 5px 0px #1e3a8a,
+        6px 6px 15px rgba(0, 0, 0, 0.6),
+        0px 0px 25px rgba(100, 223, 223, 0.7);
+}
+
+/* 2. Dòng mô tả: Nổi bật, dễ đọc */
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover p {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-color: rgba(100, 223, 223, 0.5);
+}
