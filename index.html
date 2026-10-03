@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dương Nguyễn Công Dinh | Portfolio Truyền Thông Đa Phương Tiện</title>
+    
+    <!-- Nhập Google Fonts: Montserrat (cho Header đồ sộ) & Space Grotesk (cho Tiêu đề mục xịn xò) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #0f172a;
@@ -18,11 +24,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); }
 
-        /* ================= HEADER BẦU TRỜI SAO DẢI NGÂN HÀ ================= */
+        /* ================= HEADER BẦU TRỜI SAO ĐỒ SỘ ================= */
         header {
-            /* Nền dải ngân hà: Gradient xanh đen đêm sâu + Dải sáng lung linh */
             background: 
-                /* Lớp hạt sao dày đặc bằng Radial Gradients */
                 radial-gradient(1px 1px at 10% 20%, #ffffff, rgba(0,0,0,0)),
                 radial-gradient(1.5px 1.5px at 20% 40%, rgba(255,255,255,0.9), rgba(0,0,0,0)),
                 radial-gradient(1px 1px at 30% 70%, #ffffff, rgba(0,0,0,0)),
@@ -33,14 +37,11 @@
                 radial-gradient(1px 1px at 80% 15%, #ffffff, rgba(0,0,0,0)),
                 radial-gradient(1.5px 1.5px at 90% 75%, #ffffff, rgba(0,0,0,0)),
                 radial-gradient(2px 2px at 95% 35%, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-                /* Dải ngân hà sáng rực chéo góc trái */
                 radial-gradient(ellipse at 15% 50%, rgba(125, 211, 252, 0.35) 0%, rgba(56, 189, 248, 0.15) 45%, transparent 70%),
-                /* Nền đêm chuyển từ xanh thẫm đêm sâu sang đen */
                 linear-gradient(135deg, #071328 0%, #0c1e3e 35%, #08101e 70%, #030712 100%);
             
-            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
             color: white;
-            padding: 95px 20px;
+            padding: 100px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -49,7 +50,6 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        /* Lớp hiệu ứng ánh sao lấp lánh phụ */
         header::before {
             content: '';
             position: absolute;
@@ -74,24 +74,27 @@
             transform: scale(1.05);
         }
 
-        /* Tiêu đề chữ 3D nổi bật */
+        /* Tiêu đề chính: Font Montserrat Đồ Sộ & Siêu Đậm */
         header h1 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 2.8rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem); /* Tự động phóng to theo màn hình */
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
+            letter-spacing: 3px;
+            line-height: 1.15;
+            margin-bottom: 20px;
             color: #ffffff;
             position: relative;
             z-index: 1;
             
+            /* Đổ bóng 3D đa tầng siêu xịn */
             text-shadow: 
                 1px 1px 0px #0284c7,
                 2px 2px 0px #0369a1,
                 3px 3px 0px #075985,
-                4px 4px 8px rgba(0, 0, 0, 0.8),
-                0px 0px 20px rgba(186, 230, 253, 0.6);
+                4px 4px 0px #0c4a6e,
+                5px 5px 12px rgba(0, 0, 0, 0.8),
+                0px 0px 25px rgba(186, 230, 253, 0.7);
                 
             transition: text-shadow 0.3s ease, transform 0.3s ease;
         }
@@ -102,23 +105,25 @@
                 1px 1px 0px #38bdf8,
                 2px 2px 0px #0284c7,
                 3px 3px 0px #0369a1,
-                4px 4px 10px rgba(0, 0, 0, 0.9),
-                0px 0px 30px rgba(186, 230, 253, 0.9);
+                4px 4px 0px #075985,
+                5px 5px 15px rgba(0, 0, 0, 0.9),
+                0px 0px 35px rgba(186, 230, 253, 0.9);
         }
 
-        /* Dòng mô tả trong suốt nhẹ */
+        /* Dòng mô tả Header */
         header p {
-            font-size: 1.2rem;
-            font-weight: 500;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
             color: #f0f9ff;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             display: inline-block;
-            padding: 8px 24px;
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 10px 28px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 1;
@@ -126,32 +131,72 @@
         }
 
         header:hover p {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.18);
             color: #ffffff;
-            border-color: rgba(186, 230, 253, 0.5);
-            box-shadow: 0 6px 25px rgba(56, 189, 248, 0.3);
+            border-color: rgba(186, 230, 253, 0.6);
+            box-shadow: 0 6px 25px rgba(56, 189, 248, 0.35);
         }
-        /* ==================================================== */
 
+        /* ================= TIÊU ĐỀ MỤC XỊN XÒ (H2) ================= */
         .container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
         
-        .card { background: var(--card-bg); border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; }
-        .card h2 { color: var(--text-heading); border-bottom: 3px solid var(--accent); padding-bottom: 8px; margin-bottom: 20px; font-size: 1.35rem; display: inline-block; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 32px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
 
+        /* Tiêu đề H2 thiết kế mới */
+        .card h2 { 
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-heading); 
+            letter-spacing: -0.3px;
+            margin-bottom: 22px; 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* Gạch chân gradient nghệ thuật bên dưới H2 */
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #38bdf8);
+            border-radius: 4px;
+        }
+
+        /* Icon trong H2 được đặt vào khung bo góc nổi bật */
+        .card h2 span.icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+        }
+
+        /* ================= CÁC THÀNH PHẦN KHÁC ================= */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .info-item { background: #f1f5f9; padding: 12px 18px; border-radius: 8px; }
+        .info-item { background: #f1f5f9; padding: 14px 18px; border-radius: 10px; font-size: 0.95rem; }
         .info-item strong { color: var(--text-heading); }
 
-        .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; margin-right: 5px; margin-top: 5px; }
+        .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-weight: 600; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; margin-right: 6px; margin-top: 6px; }
 
         ul.timeline { list-style: none; position: relative; padding-left: 20px; }
-        ul.timeline li { margin-bottom: 15px; position: relative; }
-        ul.timeline li::before { content: "•"; color: var(--accent); font-size: 1.8rem; position: absolute; left: -20px; top: -5px; }
+        ul.timeline li { margin-bottom: 16px; position: relative; }
+        ul.timeline li::before { content: "•"; color: var(--accent); font-size: 1.8rem; position: absolute; left: -20px; top: -6px; }
 
-        .skill-box { background: #fafafa; border-left: 4px solid var(--accent); padding: 15px 20px; margin-top: 15px; border-radius: 0 8px 8px 0; }
-        .skill-box h3 { font-size: 1.1rem; color: var(--text-heading); margin-bottom: 8px; }
+        .skill-box { background: #fafafa; border-left: 4px solid var(--accent); padding: 18px 22px; margin-top: 15px; border-radius: 0 10px 10px 0; }
+        .skill-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; color: var(--text-heading); margin-bottom: 8px; }
 
-        footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; margin-top: 40px; }
+        footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; margin-top: 40px; font-family: 'Space Grotesk', sans-serif; }
     </style>
 </head>
 <body>
@@ -164,7 +209,7 @@
     <div class="container">
         <!-- Thông tin cá nhân -->
         <div class="card">
-            <h2>📌 Thông Tin Cá Nhân</h2>
+            <h2><span class="icon-box">📌</span> Thông Tin Cá Nhân</h2>
             <div class="grid-2">
                 <div class="info-item"><strong>Họ và tên:</strong> Dương Nguyễn Công Dinh</div>
                 <div class="info-item"><strong>Ngày sinh:</strong> 31/01/2008</div>
@@ -176,7 +221,7 @@
 
         <!-- Quá trình học tập & Thành tích -->
         <div class="card">
-            <h2>🎓 Quá Trình Học Tập & Thành Tích</h2>
+            <h2><span class="icon-box">🎓</span> Quá Trình Học Tập & Thành Tích</h2>
             <ul class="timeline">
                 <li>
                     <strong>2023 - Nay:</strong> Sinh viên năm nhất ngành Truyền thông Đa phương tiện - Đại học Cần Thơ.
@@ -194,7 +239,7 @@
 
         <!-- Định hướng chuyên môn -->
         <div class="card">
-            <h2>🎯 Định Hướng Chuyên Môn & Đam Mê</h2>
+            <h2><span class="icon-box">🎯</span> Định Hướng Chuyên Môn & Đam Mê</h2>
 
             <div class="skill-box">
                 <h3>🎬 1. Sản xuất Nội dung & Video (Content & Video Production)</h3>
@@ -219,7 +264,7 @@
 
         <!-- Sở thích -->
         <div class="card">
-            <h2>🎨 Sở Thích Cá Nhân</h2>
+            <h2><span class="icon-box">🎨</span> Sở Thích Cá Nhân</h2>
             <p>• <strong>Chơi Game:</strong> Khám phá cơ chế thiết kế Game (Game Design), đồ họa và kịch bản game.</p>
             <p>• <strong>Sáng tạo nội dung:</strong> Học hỏi các kỹ thuật quay dựng và hiệu ứng hình ảnh mới.</p>
         </div>
