@@ -264,16 +264,12 @@
             transform: translateY(-1px);
         }
 
-        /* Biểu tượng Facebook đồng bộ màu xanh cyan glow */
-        .fb-icon {
-            width: 22px;
-            height: 22px;
-            fill: var(--cyan-glow);
+        /* Biểu tượng Facebook gốc chuẩn màu xanh Facebook chuẩn (#0866ff) */
+        .fb-icon-img {
+            width: 24px;
+            height: 24px;
             flex-shrink: 0;
-            transition: fill 0.2s ease;
-        }
-        .social-link:hover .fb-icon {
-            fill: #7dd3fc;
+            display: block;
         }
 
         .badge { 
@@ -356,13 +352,16 @@
                         <div class="info-item"><strong>Trường:</strong> Đại học Cần Thơ</div>
                         <div class="info-item"><strong>Khóa / Ngành:</strong> Khóa 52 — Truyền thông Đa phương tiện</div>
                         <div class="info-item">
-                            <strong>Email SV:</strong> 
+                            <strong>Email:</strong> 
                             <a href="mailto:DinhB2605262@student.ctu.edu.vn" class="email-link">DinhB2605262@student.ctu.edu.vn</a>
                         </div>
                         <div class="info-item">
-                            <strong>Facebook:</strong> 
                             <a href="https://facebook.com" target="_blank" class="social-link">
-                                <svg class="fb-icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <!-- Logo Facebook chuẩn hình tròn xanh lam chữ 'f' trắng -->
+                                <svg class="fb-icon-img" viewBox="0 0 36 36">
+                                    <path fill="#0866FF" d="M36 18c0-9.941-8.059-18-18-18S0 8.059 0 18c0 8.983 6.586 16.425 15.188 17.775V23.238h-4.505V18h4.505v-3.996c0-4.448 2.648-6.906 6.702-6.906 1.942 0 3.974.347 3.974.347v4.37h-2.239c-2.204 0-2.892 1.368-2.892 2.774V18h4.922l-.787 5.238h-4.135v12.537C29.414 34.425 36 26.983 36 18z"/>
+                                    <path fill="#FFFFFF" d="M25.07 23.238l.787-5.238h-4.922v-3.411c0-1.406.688-2.774 2.892-2.774h2.239V7.445s-2.032-.347-3.974-.347c-4.054 0-6.702 2.458-6.702 6.906V18h-4.505v5.238h4.505v12.537a18.312 18.312 0 002.812.225c.954 0 1.897-.076 2.813-.225V23.238h4.135z"/>
+                                </svg>
                                 Công Dinh (Dice)
                             </a>
                         </div>
