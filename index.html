@@ -234,8 +234,10 @@
             font-size: 0.95rem; 
             border: 1px solid rgba(56, 189, 248, 0.12);
             color: #e2e8f0;
+            display: flex;
+            align-items: center;
         }
-        .info-item strong { color: var(--cyan-glow); }
+        .info-item strong { color: var(--cyan-glow); margin-right: 6px; }
 
         .social-link {
             display: inline-flex;
@@ -244,11 +246,24 @@
             color: #38bdf8;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
         .social-link:hover {
             color: #7dd3fc;
             text-decoration: underline;
+            transform: translateY(-1px);
+        }
+
+        /* Biểu tượng Facebook được chỉnh bự hơn */
+        .fb-icon {
+            width: 22px;
+            height: 22px;
+            fill: #38bdf8;
+            flex-shrink: 0;
+            transition: fill 0.2s ease;
+        }
+        .social-link:hover .fb-icon {
+            fill: #7dd3fc;
         }
 
         .badge { 
@@ -330,11 +345,10 @@
                         <div class="info-item"><strong>Ngày sinh:</strong> 31/01/2008</div>
                         <div class="info-item"><strong>Trường:</strong> Đại học Cần Thơ</div>
                         <div class="info-item"><strong>Khóa / Ngành:</strong> Khóa 52 — Truyền thông Đa phương tiện</div>
-                        <div class="info-item"><strong>Email SV:</strong> <a href="mailto:DinhB2605262@student.ctu.edu.vn" style="color: #38bdf8; text-decoration: none;">DinhB2605262@student.ctu.edu.vn</a></div>
+                        <div class="info-item"><strong>Email:</strong> <a href="mailto:DinhB2605262@student.ctu.edu.vn" style="color: #38bdf8; text-decoration: none;">DinhB2605262@student.ctu.edu.vn</a></div>
                         <div class="info-item">
-                            <strong>Facebook:</strong> 
                             <a href="https://facebook.com" target="_blank" class="social-link">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <svg class="fb-icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                                 Công Dinh (Dice)
                             </a>
                         </div>
